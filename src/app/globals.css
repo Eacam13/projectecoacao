@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --brand-primary: 123 46% 34%;
+  --brand-primary-light: 123 46% 60%;
+  --brand-primary-dark: 123 56% 12%;
+  --brand-secondary: 202 97% 42%;
+  --brand-secondary-light: 202 92% 76%;
+  --brand-secondary-dark: 202 98% 30%;
+  --brand-accent: 171 100% 37%;
+  --brand-background: 0 0% 100%;
+  --brand-background-alt: 135 17% 97%;
+  --brand-text-base: 0 0% 11%;
+  --brand-text-muted: 135 8% 41%;
+  --brand-text-on-primary: 0 0% 100%;
+
+  --border: var(--brand-neutral-200);
+
+  /* Neutral Colors */
+  --brand-neutral-50: 120 10% 98%;
+  --brand-neutral-100: 135 17% 93%;
+  --brand-neutral-200: 135 17% 88%;
+  --brand-neutral-300: 135 17% 79%;
+  --brand-neutral-400: 135 17% 67%;
+  --brand-neutral-500: 135 17% 55%;
+  --brand-neutral-600: 135 17% 43%;
+  --brand-neutral-700: 135 17% 29%;
+  --brand-neutral-800: 135 17% 18%;
+  --brand-neutral-900: 135 17% 9%;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem;  /* 8px */
+  --spacing-md: 1rem;    /* 16px */
+  --spacing-lg: 1.5rem;  /* 24px */
+  --spacing-xl: 2rem;    /* 32px */
+  --spacing-2xl: 2.5rem; /* 40px */
+  --spacing-3xl: 3rem;   /* 48px */
+  
+  /* Border Radius */
+  --radius-xs: 0.375rem; /* 6px */
+  --radius-sm: 0.5rem;   /* 8px */
+  --radius-md: 0.75rem;  /* 12px */
+  --radius-lg: 1rem;     /* 16px */
+  --radius-xl: 1.25rem;  /* 20px */
+  --radius-full: 9999px;
+  
+  --radius: var(--radius-sm);
+}
+
+.dark {
+  /* Define dark mode colors if needed, otherwise they will inherit from :root */
+  /* Example: */
+  /* --brand-background: 0 0% 10%; */
+  /* --brand-text-base: 0 0% 90%; */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 lg:py-24;
+  }
+  
+  .section-sm {
+    @apply py-12 lg:py-16;
+  }
+}
