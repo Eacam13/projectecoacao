@@ -49,8 +49,10 @@ export function CtaSection() {
               </Link>
             </Button>
             
-            <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-              Saiba Mais
+            <Button size="lg" variant="outline" className="border-white/30 text-black hover:bg-white/10">
+              <Link href={routes.tips}>
+                Saiba Mais
+              </Link>
             </Button>
           </motion.div>
         </motion.div>

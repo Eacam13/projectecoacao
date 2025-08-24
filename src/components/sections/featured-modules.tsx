@@ -52,7 +52,7 @@ export function FeaturedModules() {
             
             return (
               <motion.div key={module.id} variants={itemVariants}>
-                <Card className="h-full hover:shadow-lg transition-all duration-300 group cursor-pointer">
+                <Card className="flex flex-col justify-between h-full hover:shadow-lg transition-all duration-300 group cursor-pointer">
                   <CardHeader>
                     <div className="flex items-center space-x-3">
                       <div className={`flex items-center justify-center w-12 h-12 rounded-lg ${module.color} text-white`}>
@@ -65,14 +65,16 @@ export function FeaturedModules() {
                   </CardHeader>
                   
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground text-justify">
                       {module.description}
                     </p>
                   </CardContent>
                   
                   <CardFooter>
                     <Button variant="ghost" className="group/btn w-full justify-between">
-                      Explorar Módulo
+                      <Link href={routes.modules}>
+                        Explorar Módulo
+                      </Link>
                       <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </CardFooter>
