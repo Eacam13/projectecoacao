@@ -75,10 +75,10 @@ export function Hero() {
                   </Link>
                 </Button>
                 
-                <Button size="lg" variant="outline" className="group">
+                {/* <Button size="lg" variant="outline" className="group">
                   <Play className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                   Ver Demonstração
-                </Button>
+                </Button> */}
               </motion.div>
               
               <motion.div 

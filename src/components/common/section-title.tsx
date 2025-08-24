@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 
 interface SectionTitleProps {
   title: string;
+  pretitle?: string;
   subtitle?: string;
   className?: string;
   align?: 'left' | 'center' | 'right';
@@ -9,6 +10,7 @@ interface SectionTitleProps {
 
 export function SectionTitle({ 
   title, 
+  pretitle, 
   subtitle, 
   className, 
   align = 'center' 
@@ -19,6 +21,11 @@ export function SectionTitle({
       'text-center': align === 'center',
       'text-right': align === 'right',
     }, className)}>
+      {pretitle && (
+        <p className="text-sm font-semibold text-primary mb-2">
+          {pretitle}
+        </p>
+      )}
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
         {title}
       </h2>

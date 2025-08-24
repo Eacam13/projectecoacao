@@ -52,13 +52,6 @@
   --radius: var(--radius-sm);
 }
 
-.dark {
-  /* Define dark mode colors if needed, otherwise they will inherit from :root */
-  /* Example: */
-  /* --brand-background: 0 0% 10%; */
-  /* --brand-text-base: 0 0% 90%; */
-}
-
 @layer base {
   * {
     @apply border-border;
